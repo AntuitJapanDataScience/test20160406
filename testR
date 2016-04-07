@@ -1,2 +1,12 @@
 # コマンドライン上でのRスクリプトの実行
 R --vanilla --slave --args 2 4 < test.R
+
+
+
+
+#R script (test.R)
+args <- commandArgs(trailingOnly=T)
+x <- as.numeric(args[1])
+y <- as.numeric(args[2])
+z <- x + y
+print(z)
