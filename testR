@@ -11,6 +11,7 @@ print(z)
 #shell script の実行
 bash do.sh 100 1
 
+Rscript test.R 100 1
 
 #Results
 [1] 101
