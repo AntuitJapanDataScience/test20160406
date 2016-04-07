@@ -1,2 +1,2 @@
 # コマンドライン上でのRスクリプトの実行
-R --vanilla --slave < test.R
+R --vanilla --slave --args 2 4 < test.R
