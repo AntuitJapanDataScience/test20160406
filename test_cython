@@ -27,9 +27,21 @@ def calc_cython(int N):
         return j
 
     
-###### Results #####
+###### calc #####
 print "normal:"
 %time calc(10000000)
 
 print "Cython:"
 %time calc_cython(10000000)
+
+
+
+###### output #####
+normal:
+Wall time: 631 ms
+Cython:
+Wall time: 4 ms
+
+
+Out[158]:
+10000001
