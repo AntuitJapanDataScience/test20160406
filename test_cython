@@ -1,0 +1,35 @@
+###### Library #####
+import numpy as np
+import cython
+%load_ext Cython
+
+
+###### From here #####
+
+
+%%cython
+import numpy as np
+import cython
+def calc(N):
+    i=1;j=1
+    for i in range(N):
+        i=i+1
+        for j in range(N):
+            j=j+i+1
+        return j
+
+def calc_cython(int N):
+    cdef int i=1,j=1
+    for i in range(N):
+        i=i+1
+        for j in range(N):
+            j=j+i+1
+        return j
+
+    
+###### Results #####
+print "normal:"
+%time calc(10000000)
+
+print "Cython:"
+%time calc_cython(10000000)
